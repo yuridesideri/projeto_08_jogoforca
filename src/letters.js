@@ -38,6 +38,7 @@ export default function Letters(props) {
 function Letter(props) {
 	return (
 		<LetterButton
+			data-identifier="letter"
 			tried={props.allProps.tried}
 			char={props.char}
 			gameState={props.allProps.gameState}

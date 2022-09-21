@@ -33,8 +33,8 @@ export default function Guess(props) {
 	return (
 		<GuessDiv>
 			<p>Try a guess, if you dare!</p>
-			<input onChange={(e) => setInput(e.target.value)} type="text" />
-			<button onClick={() => checkGame(removeWeirdChars(input), setGameState, removeWeirdChars(word))}>
+			<input data-identifier="type-guess" onChange={(e) => setInput(e.target.value)} type="text" />
+			<button data-identifier="guess-button" onClick={() => checkGame(removeWeirdChars(input), setGameState, removeWeirdChars(word))}>
 				Check!
 			</button>
 		</GuessDiv>

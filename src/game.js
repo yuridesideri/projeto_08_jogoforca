@@ -65,10 +65,10 @@ export default function Game(props) {
 	return (
 		<GameContainer>
 			<ImageContainer>
-				<img src={image} alt="" />
+				<img data-identifier="game-image" src={image} alt="" />
 			</ImageContainer>
 			<GameLogicContainer>
-				<button
+				<button data-identifier="choose-word"
 					onClick={() => {
 					resetStates(setAll);
 						setWord(randomWord());
@@ -77,7 +77,7 @@ export default function Game(props) {
 				>
 					Draw a word!
 				</button>
-				<DynamicWord color={wordColor}>
+				<DynamicWord data-identifier="word" color={wordColor}>
 					{wordCharRender(wordSplitted, rightAnswers, gameState,props.removeWeirdChars)}
 				</DynamicWord>
 			</GameLogicContainer>
